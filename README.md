@@ -27,7 +27,27 @@ Suppose you are the outside consultant hired by the startup. Here are the sugges
 * As part of the README.md file, summarize your experiences with each of the three methods: automated code generation, AI-assisted programming, and AI-generated code. What are the possibilities for reducing the programming workload in the startup? What is your recommendation to the firm regarding its staffing of programmers and software engineers? 
 * As part of the README.md file, also list the training materials that you used, providing the URLs and noting their usefulness in completing the assignment. Your recommendations will be noted and could influence future versions of this assignment.
 
-## AI-Assisted Programming
+## AI-Assisted Programming with Amazon Q
+[Amazon Q's Free tier](https://aws.amazon.com/q/developer/) developer was used for this project. As stated on its introduction page, there are 4 main features of Amazon Q that are tailored for programmers: Inline Code suggestions and Amazon Q's Live Chat bot.
+
+### Code Summarization
+While revisiting the [week four statistics assignment](https://github.com/miguswong/MSDS431-MigusWong-Assignment-3), I found myself not only for getting what the assignment is, but also what the code I wrote was meant to do. This is where I found my first useful feature that these LLMs provide. Passing my testing functions to Q, the LLM was able to succintly provide explanations of each testing function I had written months ago. As a matter of fact, the AI had spotted an issue with my testing code. I had originally written the code with a pass check, but res and exp were hard-coded to always be true. 
+````go
+    exp := true
+    res := true
+//More testing code here
+if res != exp {
+    t.Errorf("Expected %t, got %t instead.", exp, res)
+}
+````
+Q had spotted this and had output the following information about the snippet of code.
+
+````
+Compares the result with expected value
+
+Currently, this will never fail because both res and exp are set to true
+````
+In this scenario, Q was able to identify bad testing code that was set to never fail. Furthermore, it was able to correctly identify that the test points in question were the Anscombe Quartet.
 
 ## AI-Generated Code
 
