@@ -166,4 +166,4 @@ While the LLM model was able to correctly determine that they it would have to m
 
 The most likely cause of this interesting behavior is that the model may have been built on older versions of the stats package that returned just the slope and intercept, and not a corrdinate series. Ultimately, I was not able to get the LLM to correct it's mistakes or correct the code through prompt engineering.
 
-The entire conversation can be found on this [link](https://chatgpt.com/share/672e52ae-d3e0-8008-8dea-bf95c3c61c7a)
+The entire conversation can be found on this [link](https://chatgpt.com/share/672e52ae-d3e0-8008-8dea-bf95c3c61c7a) or in [GPT Conversation.txt](https://github.com/miguswong/WongMSDS437Assignment7/blob/main/GPT%20Conversation.txt)
